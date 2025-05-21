@@ -24,8 +24,8 @@ struct DirectedGraphBuilder {
         
         // TODO: 2 - Replace details of this instance of SupabaseClient with settings for your group's database
         let supabase = SupabaseClient(
-          supabaseURL: URL(string: "https://mrdjbpjpvgtqxznsgtee.supabase.co")!,
-          supabaseKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1yZGpicGpwdmd0cXh6bnNndGVlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTczMzIyMzgsImV4cCI6MjAzMjkwODIzOH0.kLM3U980_U3qjFvw-5kvUERqSsIiB_-HTHa2FlhM5wU"
+          supabaseURL: URL(string: "https://vumfrbkkckogbkksijif.supabase.co")!,
+          supabaseKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ1bWZyYmtrY2tvZ2Jra3NpamlmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc4MzMxNTIsImV4cCI6MjA2MzQwOTE1Mn0.NRwaXscGT3hK5J4DWvOpFMYN92U-UsHsixsRQX9W-S8"
         )
 
         print("About to read page and edge data from database...", terminator: "")
