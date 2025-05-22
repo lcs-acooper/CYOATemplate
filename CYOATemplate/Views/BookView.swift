@@ -81,13 +81,7 @@ struct BookView: View {
                         Image(systemName: "arrow.counterclockwise")
                     }
                 }
-                ToolbarItem(placement: . automatic){
-                    Button{
-                        
-                    } label: {
-                        Image(systemName: "arrow.back")
-                    }
-                }
+                
                
 
             }
