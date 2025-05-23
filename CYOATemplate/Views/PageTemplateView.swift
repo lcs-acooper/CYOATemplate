@@ -14,6 +14,7 @@ struct PageTemplateView<Content: View>: View {
         ZStack {
           
             LinearGradient(
+                // I messed up and pushed to main im going to push this to development 
                 gradient: Gradient(colors: [.red.opacity(0.8), .white]),
                 startPoint: .bottom,
                 endPoint: .top
