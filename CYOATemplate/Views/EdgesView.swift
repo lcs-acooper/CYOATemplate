@@ -71,24 +71,9 @@ struct EdgesView: View {
                             print("Current page number is: \(book.currentPageId!)")
                             print("==== about to change page ====")
                             
-                            if edge.prompt.contains("Turn to the next page") {
-                                
-                                if quizResult == .quizNotActive ||
-                                    quizResult == .wasNotCorrect {
-                                    showingQuizView = true
-                                } else {
-                                    
-                                    // Question answered correctly, allow reader to move on
-                                    book.read(edge.toPage)
-
-                                }
-                                
-                            } else {
-
-                                // Move to page edge connects to
                                 // (No prompt for quiz on pages that have multiple options)
+                            withAnimation(.easeInOut(duration: 0.2)) {
                                 book.read(edge.toPage)
-
                             }
                             
                             // DEBUG
