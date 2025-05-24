@@ -54,6 +54,7 @@ struct CoverView: View {
                                 .padding()
                                 .background(.white)
                                 .cornerRadius(12)
+
                 }
                 }
                 .padding()

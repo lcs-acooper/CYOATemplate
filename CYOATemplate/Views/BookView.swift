@@ -73,6 +73,16 @@ struct BookView: View {
                     }
 
                 }
+                
+                ToolbarItem(placement: .automatic) {
+                    Button{
+                        book.showCoverPage()
+                    } label: {
+                        Image(systemName: "arrow.counterclockwise")
+                    }
+                }
+                
+               
 
             }
             // Show the statistics view

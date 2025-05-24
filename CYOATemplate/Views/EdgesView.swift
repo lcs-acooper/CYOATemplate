@@ -27,6 +27,8 @@ struct EdgesView: View {
     
     // Whether the quiz question was answered correctly
     @State private var quizResult: QuizResult = .quizNotActive
+    
+    
 
     // MARK: Computed properties
     var body: some View {
