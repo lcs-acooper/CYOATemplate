@@ -16,35 +16,52 @@ struct CoverView: View {
     
     // MARK: Computed properties
     var body: some View {
-        VStack {
-            
-            if book.isNotReadyToRead {
+            ZStack {
+                LinearGradient(
+                    colors: [Color.white, Color.red.opacity(0.8)],
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
+                )
+                .ignoresSafeArea()
                 
-                ProgressView()
-                
-            } else {
-                
-                // Show the cover
-                Text("Bomb defusal adventure")
-                    .font(.largeTitle)
-                
-                Button {
-                    // Animate page changes (fade)
-                    withAnimation {
-                        book.beginReading()
-                    }
-                } label: {
-                    Text("Begin reading")
-                }
-                .buttonStyle(.borderedProminent)
-            }
-            
-        }
-        .padding()
+                if book.isNotReadyToRead {
         
+                    ProgressView()
+                    
+                } else {
+             
+                    VStack(spacing: 20) {
+                        
+                        Text("Defuse a Bomb")
+                            .font(.system(size: 45, weight: .bold, design: .rounded))
+                            .padding()
+                        
+                        Text("by Yoshi, AJ, Hayden")
+                            .font(.title3)
+                            .foregroundStyle(.black)
+                        
+                        Spacer()
+                            .frame(height: 40)
+                        
+                        Button(action: {
+                            withAnimation(.easeInOut(duration: 0.5)) {
+                                book.beginReading()
+                            }
+                        }) {
+                            Text("Begin Reading")
+                                .font(.headline)
+                                .foregroundStyle(.black)
+                                .padding()
+                                .background(.white)
+                                .cornerRadius(12)
+
+                }
+                }
+                .padding()
+            }
+        }
     }
 }
-
 #Preview {
     CoverView()
 }
