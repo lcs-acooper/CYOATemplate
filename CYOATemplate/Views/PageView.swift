@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct PageView: View {
 
@@ -13,6 +14,8 @@ struct PageView: View {
 
     // Access the book state through the environment
     @Environment(BookStore.self) var book
+    
+    @State private var player: AVAudioPlayer?
     
     // The view model for the page view
     //
@@ -34,6 +37,11 @@ struct PageView: View {
                         // DEBUG
                         let _ = print("Text for this page is:\n\n\(page.narrative)\n\n")
                         let _ = print("Image for this page is:\n\n\(page.image ?? "(no image for this page)")\n\n")
+                        if let sound = page.sound {
+                            let _ = print("Sound for this page is:\n\n\(sound)")
+                        } else {
+                            let _ = print("(no sound for this page)")
+                        }
                         
                         Text(
                             try! AttributedString(
@@ -44,6 +52,13 @@ struct PageView: View {
                             )
                         )
                         .font(.title2)
+                        .onAppear {
+                            print("About to look for sound on page...")
+                            if let page = viewModel.page, let sound = page.sound {
+                                print("About to invoke 'startPlaying'...")
+                                startPlaying(fileName: sound)
+                            }
+                        }
                         
                         if let image = page.image {
                             
@@ -90,6 +105,31 @@ struct PageView: View {
             }
         }
 
+    }
+    
+    // MARK: Function(s)
+    func startPlaying(fileName: String) {
+        
+        print("About to start playing background audio")
+        
+        // Make the player stop playing whatever sound might already be playing
+        player?.stop()
+        
+        // Get a reference to the sound file from the app bundle
+        guard let path = Bundle.main.path(forResource: "\(fileName).mp3", ofType: nil) else {
+            print("File for sound not found in app bundle.")
+            return
+        }
+        let url = URL(fileURLWithPath: path)
+        
+        // Actually play the audio file
+        do {
+            player = try AVAudioPlayer(contentsOf: url)
+            player?.numberOfLoops = Int.max
+            player?.play()
+        } catch {
+            print("Unable to play)")
+        }
     }
 }
 

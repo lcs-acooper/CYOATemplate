@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02EAE76E2DE2132600FAD52E /* assumptions.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 02EAE76D2DE2132600FAD52E /* assumptions.mp3 */; };
+		02EAE7702DE37A5200FAD52E /* weezered.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 02EAE76F2DE37A5100FAD52E /* weezered.mp3 */; };
+		02EAE7872DE3994000FAD52E /* mario.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 02EAE7852DE3994000FAD52E /* mario.mp3 */; };
+		02EAE7882DE3994000FAD52E /* WLL.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 02EAE7862DE3994000FAD52E /* WLL.mp3 */; };
 		8123CD292A34F99E00F9DF1C /* StoryInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8123CD282A34F99E00F9DF1C /* StoryInformation.swift */; };
 		8123CD2B2A34F9C100F9DF1C /* SharedFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8123CD2A2A34F9C100F9DF1C /* SharedFunctions.swift */; };
 		8123CD2D2A34FE4800F9DF1C /* DirectedGraphBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8123CD2C2A34FE4800F9DF1C /* DirectedGraphBuilder.swift */; };
@@ -63,6 +67,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		02EAE76D2DE2132600FAD52E /* assumptions.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = assumptions.mp3; sourceTree = "<group>"; };
+		02EAE76F2DE37A5100FAD52E /* weezered.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = weezered.mp3; sourceTree = "<group>"; };
+		02EAE7852DE3994000FAD52E /* mario.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mario.mp3; sourceTree = "<group>"; };
+		02EAE7862DE3994000FAD52E /* WLL.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WLL.mp3; sourceTree = "<group>"; };
 		8123CD162A34CF7B00F9DF1C /* GraphGenerator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GraphGenerator; sourceTree = BUILT_PRODUCTS_DIR; };
 		8123CD282A34F99E00F9DF1C /* StoryInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryInformation.swift; sourceTree = "<group>"; };
 		8123CD2A2A34F9C100F9DF1C /* SharedFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedFunctions.swift; sourceTree = "<group>"; };
@@ -122,6 +130,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02EAE7662DE20A4400FAD52E /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				02EAE7852DE3994000FAD52E /* mario.mp3 */,
+				02EAE7862DE3994000FAD52E /* WLL.mp3 */,
+				02EAE76F2DE37A5100FAD52E /* weezered.mp3 */,
+				02EAE76D2DE2132600FAD52E /* assumptions.mp3 */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
 		8123CD172A34CF7B00F9DF1C /* GraphGenerator */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +229,7 @@
 				812F512D2C0CDA1100C1A270 /* ViewModels */,
 				81C198AC2A251ABC0047A4B3 /* Assets.xcassets */,
 				81C198AE2A251ABC0047A4B3 /* Preview Content */,
+				02EAE7662DE20A4400FAD52E /* Audio */,
 			);
 			path = CYOATemplate;
 			sourceTree = "<group>";
@@ -358,7 +378,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				81C198B02A251ABC0047A4B3 /* Preview Assets.xcassets in Resources */,
+				02EAE7702DE37A5200FAD52E /* weezered.mp3 in Resources */,
 				81C198AD2A251ABC0047A4B3 /* Assets.xcassets in Resources */,
+				02EAE7872DE3994000FAD52E /* mario.mp3 in Resources */,
+				02EAE7882DE3994000FAD52E /* WLL.mp3 in Resources */,
+				02EAE76E2DE2132600FAD52E /* assumptions.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

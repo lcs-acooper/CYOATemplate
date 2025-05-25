@@ -13,6 +13,7 @@ struct Page: Identifiable, Codable {
     var id: Int
     var narrative: String
     var image: String?
+    var sound: String?
     var endingContext: String?
     var endingTypeId: Int?
     
@@ -22,6 +23,7 @@ struct Page: Identifiable, Codable {
         case id
         case narrative
         case image
+        case sound
         case endingContext = "ending_context"
         case endingTypeId = "ending_type_id"
     }
