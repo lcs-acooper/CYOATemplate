@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8123CD292A34F99E00F9DF1C /* StoryInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8123CD282A34F99E00F9DF1C /* StoryInformation.swift */; };
+		8123CD2B2A34F9C100F9DF1C /* SharedFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8123CD2A2A34F9C100F9DF1C /* SharedFunctions.swift */; };
+		8123CD2D2A34FE4800F9DF1C /* DirectedGraphBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8123CD2C2A34FE4800F9DF1C /* DirectedGraphBuilder.swift */; };
 		812F51052C0C9FAD00C1A270 /* Supabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F51042C0C9FAD00C1A270 /* Supabase.swift */; };
 		812F51082C0C9FCB00C1A270 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = 812F51072C0C9FCB00C1A270 /* Auth */; };
 		812F510A2C0C9FCB00C1A270 /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = 812F51092C0C9FCB00C1A270 /* Functions */; };
@@ -61,6 +64,9 @@
 
 /* Begin PBXFileReference section */
 		8123CD162A34CF7B00F9DF1C /* GraphGenerator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GraphGenerator; sourceTree = BUILT_PRODUCTS_DIR; };
+		8123CD282A34F99E00F9DF1C /* StoryInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryInformation.swift; sourceTree = "<group>"; };
+		8123CD2A2A34F9C100F9DF1C /* SharedFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedFunctions.swift; sourceTree = "<group>"; };
+		8123CD2C2A34FE4800F9DF1C /* DirectedGraphBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectedGraphBuilder.swift; sourceTree = "<group>"; };
 		812F51042C0C9FAD00C1A270 /* Supabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supabase.swift; sourceTree = "<group>"; };
 		812F51292C0CD83300C1A270 /* AppEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEntryView.swift; sourceTree = "<group>"; };
 		812F512B2C0CD85500C1A270 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
@@ -116,11 +122,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8123CD172A34CF7B00F9DF1C /* GraphGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				8123CD272A34F98F00F9DF1C /* Model */,
+				8123CD242A34D0D000F9DF1C /* Helpers */,
+			);
+			path = GraphGenerator;
+			sourceTree = "<group>";
+		};
 		8123CD1F2A34CFC700F9DF1C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8123CD242A34D0D000F9DF1C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8123CD2A2A34F9C100F9DF1C /* SharedFunctions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		8123CD272A34F98F00F9DF1C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8123CD282A34F99E00F9DF1C /* StoryInformation.swift */,
+				8123CD2C2A34FE4800F9DF1C /* DirectedGraphBuilder.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		812F512D2C0CDA1100C1A270 /* ViewModels */ = {
@@ -154,6 +186,7 @@
 			children = (
 				812F51542C0DF46500C1A270 /* Shared */,
 				81C198A72A251ABB0047A4B3 /* CYOATemplate */,
+				8123CD172A34CF7B00F9DF1C /* GraphGenerator */,
 				81C198A62A251ABB0047A4B3 /* Products */,
 				8123CD1F2A34CFC700F9DF1C /* Frameworks */,
 			);
@@ -340,6 +373,9 @@
 				812F51562C0DF4DA00C1A270 /* Edge.swift in Sources */,
 				812F51572C0DF4DA00C1A270 /* Ending.swift in Sources */,
 				812F51582C0DF4DA00C1A270 /* Reader.swift in Sources */,
+				8123CD2B2A34F9C100F9DF1C /* SharedFunctions.swift in Sources */,
+				8123CD292A34F99E00F9DF1C /* StoryInformation.swift in Sources */,
+				8123CD2D2A34FE4800F9DF1C /* DirectedGraphBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

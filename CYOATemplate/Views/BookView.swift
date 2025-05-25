@@ -16,7 +16,7 @@ struct BookView: View {
     @State private var book = BookStore()
     
     // Whether the statistics view is being shown right now
-   
+    @State private var showingStatsView = false
 
     // Whether the settings view is being shown right now
     @State private var showingSettingsView = false
@@ -54,7 +54,15 @@ struct BookView: View {
             // Toolbar to show buttons for various actions
             .toolbar {
                 
-               
+                // Show the statistics view
+                ToolbarItem(placement: .automatic) {
+                    Button {
+                        showingStatsView = true
+                    } label: {
+                        Image(systemName: "chart.pie.fill")
+                    }
+
+                }
                 
                 // Show the settings view
                 ToolbarItem(placement: .automatic) {
@@ -77,7 +85,10 @@ struct BookView: View {
                
 
             }
-
+            // Show the statistics view
+            .sheet(isPresented: $showingStatsView) {
+                StatsView(showing: $showingStatsView)
+            }
             // Show the settings view
             .sheet(isPresented: $showingSettingsView) {
                 SettingsView(showing: $showingSettingsView)
