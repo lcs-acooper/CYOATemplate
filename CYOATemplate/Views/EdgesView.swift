@@ -74,7 +74,7 @@ struct EdgesView: View {
                             print("==== about to change page ====")
                             
                                 // (No prompt for quiz on pages that have multiple options)
-                            withAnimation(.easeInOut(duration: 0.2)) {
+                            withAnimation(.easeIn(duration: 1.5)) {
                                 book.read(edge.toPage)
                             }
                             
